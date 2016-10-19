@@ -10,6 +10,17 @@ GLuint tex;
 
 void (*DrawFunc)(void);
 
+void clearScreen(void)
+{
+    for (unsigned int i = 0; i < IMAGE_WIDTH * IMAGE_HEIGHT ; i++)
+    {
+        FBptr[i*4]   = 0;
+        FBptr[i*4+1] = 0;
+        FBptr[i*4+2] = 0;
+        FBptr[i*4+3] = 255;
+    }
+};
+
 //*****************************************************************************
 void display(void)
 {

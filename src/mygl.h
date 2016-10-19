@@ -219,13 +219,13 @@ void DrawLine(const Point& pa, const Point& pb, const Color& start, const Color&
 	}
 }
 
-void DrawTriangle(const Point& pa, const Point& pb, const Point& pc, const Color& ca, const Color& cb, const Color& cc){
+void DrawTriangle(const Point& pa, const Point& pb, const Point& pc, const Color& ca = Color(), const Color& cb = Color(), const Color& cc = Color()){
 	DrawLine(pa, pb, ca, cb);
 	DrawLine(pb, pc, cb, cc);
 	DrawLine(pc, pa, cc, ca);
 }
 
-void DrawFillTriangle(const Point& pa, const Point& pb, const Point& pc, const Color& ca, const Color& cb, const Color& cc){
+void DrawFillTriangle(const Point& pa, const Point& pb, const Point& pc, const Color& ca = Color(), const Color& cb = Color(), const Color& cc = Color()){
 	Line e1(pa, pb);
 	Line e2(pb, pc);
 	Line e3(pc, pa);
