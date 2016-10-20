@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
@@ -12,7 +15,7 @@ void (*DrawFunc)(void);
 
 void clearScreen(void)
 {
-    for (unsigned int i = 0; i < IMAGE_WIDTH * IMAGE_HEIGHT ; i++)
+    for (unsigned int i = 0; i < IMAGE_WIDTH * IMAGE_HEIGHT; i++)
     {
         FBptr[i*4]   = 0;
         FBptr[i*4+1] = 0;
@@ -119,3 +122,5 @@ void InitDataStructures(void)
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+
+#endif
